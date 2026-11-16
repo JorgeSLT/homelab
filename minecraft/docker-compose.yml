@@ -1,0 +1,17 @@
+services:
+  minecraft:
+    container_name: minecraft
+    image: itzg/minecraft-server:latest
+    restart: unless-stopped
+    ports:
+      - "25565:25565"
+    volumes:
+      - ${DATA_DIR}/minecraft:/data
+    environment:
+      - TZ=${TZ}
+      - EULA=TRUE
+      - TYPE=PAPER
+      - VERSION=LATEST
+      - MEMORY=3G
+      - ENABLE_AUTOPAUSE=true
+      - AUTOPAUSE_TIMEOUT_EST=900

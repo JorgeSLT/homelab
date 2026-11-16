@@ -1,0 +1,15 @@
+services:
+  mealie:
+    image: ghcr.io/mealie-recipes/mealie:latest
+    container_name: mealie
+    restart: unless-stopped
+    ports:
+      - "9925:9000"
+    environment:
+      - ALLOW_SIGNUP=false
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+      - BASE_URL=http://${TAILSCALE_IP}:9925
+    volumes:
+      - ${DATA_DIR}/mealie:/app/data/
