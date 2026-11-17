@@ -8,9 +8,11 @@ services:
       - TZ=${TZ}
     volumes:
       - ${DATA_DIR}/prowlarr:/config
-    ports:
-      - "9696:9696"
+    #ports:
+    #  - "9696:9696"
     restart: unless-stopped
+    networks:
+      - caddy_net
 
   radarr:
     image: lscr.io/linuxserver/radarr:latest
@@ -22,9 +24,11 @@ services:
     volumes:
       - ${DATA_DIR}/radarr:/config
       - ${DATA_DIR}/media:/data/media
-    ports:
-      - "7878:7878"
+    #ports:
+    #  - "7878:7878"
     restart: unless-stopped
+    networks:
+      - caddy_net
 
   sonarr:
     image: lscr.io/linuxserver/sonarr:latest
@@ -36,9 +40,11 @@ services:
     volumes:
       - ${DATA_DIR}/sonarr:/config
       - ${DATA_DIR}/media:/data/media
-    ports:
-      - "8989:8989"
+    #ports:
+    #  - "8989:8989"
     restart: unless-stopped
+    networks:
+      - caddy_net
 
   bazarr:
     image: lscr.io/linuxserver/bazarr:latest
@@ -50,15 +56,23 @@ services:
     volumes:
       - ${DATA_DIR}/bazarr/config:/config
       - ${DATA_DIR}/media:/data/media
-    ports:
-      - "6767:6767"
+    #ports:
+    #  - "6767:6767"
     restart: unless-stopped
+    networks:
+      - caddy_net
 
   flaresolverr:
     image: ghcr.io/flaresolverr/flaresolverr:latest
     container_name: flaresolverr
     environment:
       - TZ=${TZ}
-    ports:
-      - "8191:8191"
+    #ports:
+    #  - "8191:8191"
     restart: unless-stopped
+    networks:
+      - caddy_net
+
+networks:
+  caddy_net:
+    external: true

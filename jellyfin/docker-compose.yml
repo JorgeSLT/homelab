@@ -5,11 +5,18 @@ services:
     restart: unless-stopped
     environment:
       - TZ=${TZ}
-    ports:
-      - "8096:8096"
+    #ports:
+    #  - "8096:8096"
     volumes:
       - ${DATA_DIR}/jellyfin/config:/config
       - ${DATA_DIR}/jellyfin/cache:/cache
       - ${DATA_DIR}/media:/media
     devices:
       - /dev/dri:/dev/dri
+    networks:
+      - caddy_net
+
+networks:
+  caddy_net:
+    external: true
+

@@ -9,9 +9,15 @@ services:
       - TZ=${TZ}
       - WEBUI_PORT=8080
     ports:
-      - "8080:8080"
+      # - "8080:8080"
       - "6881:6881/tcp"
       - "6881:6881/udp"
     volumes:
       - ${DATA_DIR}/qbittorrent/config:/config
       - ${DATA_DIR}/media/downloads:/downloads
+    networks:
+      - caddy_net
+      
+networks:
+  caddy_net:
+    external: true

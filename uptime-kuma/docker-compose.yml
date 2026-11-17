@@ -5,8 +5,14 @@ services:
     restart: unless-stopped
     environment:
       - TZ=${TZ}
-    ports:
-      - "3001:3001"
+    #ports:
+    #  - "3001:3001"
     volumes:
       - ${DATA_DIR}/uptime-kuma:/app/data
       - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - caddy_net
+
+networks:
+  caddy_net:
+    external: true

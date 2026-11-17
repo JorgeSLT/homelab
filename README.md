@@ -91,7 +91,8 @@ While this is constantly evolving and I plan on adding more, the current stack i
   - [ ] Define logical separation for OS, App Data, and Media
   - [ ] Configure persistent mount points using UUIDs
 - [ ] **Backup Strategy (3-2-1)**
-  - [ ] Deploy **Restic** targeting both `/data` and `/homelab` directories (including docs and scripts)
+  - [x] Deploy **Restic** targeting both `/data` and `/homelab` directories (including docs and scripts)
+    - [ ] HDD backup
   - [ ] Configure encrypted local and offsite repositories (B2, AWS S3, or GDrive)
   - [ ] Include PaperMC world data and server configuration in the backup strategy with retention policies
     - [ ] Configure scheduled PaperMC world backups (Graceful save/backup procedure)
@@ -116,7 +117,7 @@ While this is constantly evolving and I plan on adding more, the current stack i
   - [ ] Configure Tailscale DNS integration
   - [ ] Validate IPv4 and IPv6 DNS behavior (Patch IPv6 leaks)
 - [ ] **Reverse Proxy (Caddy)**
-  - [ ] Deploy Caddy (No GUI, simple configs, automatic local HTTPS)
+  - [x] Deploy Caddy (No GUI, simple configs, automatic local HTTPS)
   - [ ] Configure internal service routes via dedicated Docker network
   - [ ] Ensure internal services are not unnecessarily exposed to the public internet
   - [ ] Restrict access to administrative endpoints and add security headers

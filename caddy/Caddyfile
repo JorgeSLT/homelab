@@ -1,0 +1,56 @@
+http://adguard.home.arpa {
+    reverse_proxy adguardhome:80
+}
+
+http://prowlarr.home.arpa {
+    reverse_proxy prowlarr:9696
+}
+
+http://radarr.home.arpa {
+    reverse_proxy radarr:7878
+}
+
+http://sonarr.home.arpa {
+    reverse_proxy sonarr:8989
+}
+
+http://bazarr.home.arpa {
+    reverse_proxy bazarr:6767
+}
+
+http://homarr.home.arpa {
+    reverse_proxy homarr:7575
+}
+
+http://jellyfin.home.arpa {
+    reverse_proxy jellyfin:8096
+}
+
+http://mealie.home.arpa {
+    reverse_proxy mealie:9000
+}
+
+http://penpot.home.arpa {
+    reverse_proxy penpot-frontend:8080
+}
+
+http://mailpit.home.arpa {
+    reverse_proxy penpot-mailpit:8025
+}
+
+http://qbittorrent.home.arpa {
+    reverse_proxy qbittorrent:8080
+}
+
+http://seerr.home.arpa {
+    reverse_proxy seerr:5055
+}
+
+http://uptime-kuma.home.arpa {
+    reverse_proxy uptime-kuma:3001
+}
+
+vaultwarden.home.arpa {
+    tls internal
+    reverse_proxy vaultwarden:80
+}

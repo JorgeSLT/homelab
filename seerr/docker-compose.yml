@@ -8,8 +8,8 @@ services:
       - LOG_LEVEL=debug
       - TZ=${TZ}
       - PORT=5055
-    ports:
-      - "5055:5055"
+    #ports:
+    #  - "5055:5055"
     volumes:
       - ${DATA_DIR}/seerr/appdata:/app/config
     healthcheck:
@@ -18,3 +18,9 @@ services:
       timeout: 3s
       interval: 15s
       retries: 3
+    networks:
+      - caddy_net
+
+networks:
+  caddy_net:
+    external: true
