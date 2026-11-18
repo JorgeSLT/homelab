@@ -11,6 +11,7 @@ services:
       - ${HOMELAB_DIR}/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
       - ${DATA_DIR}/caddy/data:/data
       - ${DATA_DIR}/caddy/config:/config
+      - ${HOMELAB_DIR}/caddy/certs:/certs
     networks:
       - caddy_net
 

@@ -89,6 +89,7 @@ services:
 
   penpot-postgres:
     image: "postgres:15"
+    container_name: penpot-postgres
     restart: unless-stopped
     stop_signal: SIGINT
     healthcheck:

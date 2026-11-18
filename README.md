@@ -113,13 +113,13 @@ While this is constantly evolving and I plan on adding more, the current stack i
 ### 🌐 Network & Ingress [P1]
 - [ ] **Internal DNS Configuration (`home.arpa`)**
   - [x] DNS Sinkhole setup (AdGuard Home)
-  - [ ] Configure AdGuard DNS rewrites and DHCP advertisement
-  - [ ] Configure Tailscale DNS integration
+  - [x] Configure AdGuard DNS rewrites and DHCP advertisement
+  - [x] Configure Tailscale DNS integration
   - [ ] Validate IPv4 and IPv6 DNS behavior (Patch IPv6 leaks)
 - [ ] **Reverse Proxy (Caddy)**
   - [x] Deploy Caddy (No GUI, simple configs, automatic local HTTPS)
-  - [ ] Configure internal service routes via dedicated Docker network
-  - [ ] Ensure internal services are not unnecessarily exposed to the public internet
+  - [x] Configure internal service routes via dedicated Docker network
+  - [x] Ensure internal services are not unnecessarily exposed to the public internet
   - [ ] Restrict access to administrative endpoints and add security headers
 - [ ] **SSL/TLS Certificate Management**
   - [ ] Configure internal HTTPS strategy (Private CA or Tailscale HTTPS)
@@ -149,10 +149,10 @@ While this is constantly evolving and I plan on adding more, the current stack i
   - [ ] Deploy **Ntfy** as the primary push notification engine (Kuma, Backups, SMART)
   - [ ] Configure disk capacity monitoring and low-space alerts
 - [ ] **Telemetry & Metrics**
-  - [ ] Deploy Prometheus & Node Exporter (Host metrics)
+  - [x] Deploy Prometheus & Node Exporter (Host metrics)
   - [ ] Deploy `smartctl_exporter` for disk health/temperature
-  - [ ] *Optional:- Deploy cAdvisor (Evaluate RAM overhead first)
-  - [ ] *Optional:- `intel_gpu_top` for QuickSync GPU metrics
+  - [ ] Deploy cAdvisor (Evaluate RAM overhead first)
+  - [ ] `intel_gpu_top` for QuickSync GPU metrics
 - [ ] **Grafana Dashboards Configuration**
   - [ ] System Overview and Storage Health
   - [ ] Media Server (Streams, Transcoding)

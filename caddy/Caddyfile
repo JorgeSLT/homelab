@@ -30,6 +30,10 @@ http://mealie.home.arpa {
     reverse_proxy mealie:9000
 }
 
+http://grafana.home.arpa {
+    reverse_proxy grafana:3000
+}
+
 http://penpot.home.arpa {
     reverse_proxy penpot-frontend:8080
 }
@@ -50,7 +54,7 @@ http://uptime-kuma.home.arpa {
     reverse_proxy uptime-kuma:3001
 }
 
-vaultwarden.home.arpa {
-    tls internal
+homelabjsanchez.tail7eb44b.ts.net {
+    tls /certs/homelabjsanchez.tail7eb44b.ts.net.crt /certs/homelabjsanchez.tail7eb44b.ts.net.key
     reverse_proxy vaultwarden:80
 }
